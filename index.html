@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kronometre</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <h1 class="sr-only">Basit Kronometre</h1>
+
+    <!-- Timer -->
+    <div class="timer" aria-live="polite" aria-atomic="true">
+      <span id="minutes">00</span><span class="colon">:</span><span id="seconds">00</span>
+    </div>
+
+    <!-- İlerleme Barı -->
+<div class="progress-container">
+  <div class="progress-bar" id="progressBar"></div>
+  <!-- Hedef noktalar -->
+  <div class="marker marker-5">
+    <span class="label">5. dk</span>
+  </div>
+  <div class="marker marker-10">
+    <span class="label">10. dk</span>
+  </div>
+</div>
+
+    <!-- Buton -->
+    <button id="toggleBtn" class="btn" aria-pressed="false" aria-label="Kronometreyi başlat">
+      Başlat
+    </button>
+
+    <!-- Kısayol açıklamaları -->
+    <div class="shortcuts">
+      <p><strong>Space</strong> → Başlat / Duraklat</p>
+      <p><strong>E</strong> → Manuel Zil</p>
+      <p><strong>R</strong> → Sıfırla</p>
+    </div>
+
+    <div id="announce" class="sr-only" aria-live="assertive"></div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
